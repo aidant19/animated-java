@@ -1,3 +1,5 @@
+# This version of Animated Java exposes the safeExportProject to the API, which can be used for exporting projects via script
+
 <div align="center">
 	<img src="https://raw.githubusercontent.com/Animated-Java/animated-java/experimental/src/assets/animated_java_icon.webp"/>
 </div>
