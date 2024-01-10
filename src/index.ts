@@ -3,7 +3,7 @@
 import * as deepslate from 'deepslate'
 import PACKAGE from '../package.json'
 import './exporter'
-import { AnimatedJavaExporter } from './exporter'
+import { AnimatedJavaExporter, safeExportProject } from './exporter'
 import { generateSearchTree, JsonText } from './minecraft'
 import './modelFormat'
 import { createChaos } from './mods/cubeMod'
@@ -95,6 +95,7 @@ globalThis.AnimatedJava = {
 		ProgressBarController,
 		roundTo,
 		roundToN,
+		safeExportProject,
 		Settings: AJSettings,
 		translate,
 		VirtualFileSystem,

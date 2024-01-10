@@ -69,7 +69,7 @@ export class AnimatedJavaExporter<
 }
 
 let activelyExporting = false
-export async function safeExportProject() {
+export async function safeExportProject(cb?: () => any) {
 	if (activelyExporting) return
 	activelyExporting = true
 	const dialog = openAJExportInProgressDialog()
@@ -83,6 +83,9 @@ export async function safeExportProject() {
 	})
 	activelyExporting = false
 	dialog.cancel()
+	if (cb != null) {
+		cb()
+	}
 }
 
 export const exportProject = consoleGroupCollapsed('exportProject', async () => {
